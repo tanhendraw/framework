@@ -9,17 +9,14 @@ class AdminSettingController extends Controller {
 
 	protected $instance = 'Setting';
 	protected $title = array(
-		'param',
 		'name',
 		'value',
 	);
 	protected $field = array(
-		'param',
 		'text',
 		'value',
 	);
 	protected $field2 = array(
-		'param',
 		'text',
 		'value',
 	);

@@ -17,11 +17,12 @@
 </head>
 <body class="skin-green" style="background-color:#222D32;">
 <div class="wrapper">
-    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
-    <script type="text/javascript">
-        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-    </script>
+    {{--<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>--}}
+    {{--<script type="text/javascript">--}}
+    {{--bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });--}}
+    {{--    </script>--}}
 
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
     @include('admin/header')
 
     @include('admin/sidebar')

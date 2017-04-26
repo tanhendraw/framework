@@ -18,7 +18,7 @@
             <input type="hidden" name="folder" value="{!! $active !!}" />
             <input type="hidden" name="url" value="{!! Request::url() !!}" />
             <input type="hidden" name="id" value="{!! $data->id !!}" />
-            <input type="hidden" name="table" value="{!! $active !!}" />
+            <input type="hidden" name="table" value="{!! strtolower($active) !!}" />
             <input type="hidden" name="column" value="{!! $i !!}" />
             <div class="control-group">
                 <div class="controls">

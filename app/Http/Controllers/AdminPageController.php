@@ -21,8 +21,7 @@ class AdminPageController extends Controller {
 			'eng',
 	);
 	protected $field2 = array(
-			'page',
-			'section',
+			'idn',
 			'eng',
 	);
 

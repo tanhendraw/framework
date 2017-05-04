@@ -5,21 +5,21 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSettingsTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('settings', function(Blueprint $table)
-		{
-			$table->increments('id');
-			$table->string('param')->unique();
-			$table->string('text');
-			$table->text('value');
-			$table->timestamps();
-		});
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('settings', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('param')->unique();
+            $table->string('text');
+            $table->text('value');
+            $table->timestamps();
+        });
 
         DB::table('settings')->insert([
                 'param' => 'websiteTitle',
@@ -46,36 +46,6 @@ class CreateSettingsTable extends Migration {
             ]
         );
         DB::table('settings')->insert([
-                'param' => 'smtpSecurity',
-                'text' => 'SMTP Security',
-                'value' => 'ssl'
-            ]
-        );
-        DB::table('settings')->insert([
-                'param' => 'smtpPort',
-                'text' => 'SMTP Port',
-                'value' => '465'
-            ]
-        );
-        DB::table('settings')->insert([
-                'param' => 'smtpHost',
-                'text' => 'SMTP Host',
-                'value' => ''
-            ]
-        );
-        DB::table('settings')->insert([
-                'param' => 'smtpPassword',
-                'text' => 'SMTP Password',
-                'value' => ''
-            ]
-        );
-        DB::table('settings')->insert([
-                'param' => 'smtpUsername',
-                'text' => 'SMTP Username',
-                'value' => 'info@tanwebsitestudio.com'
-            ]
-        );
-        DB::table('settings')->insert([
                 'param' => 'senderEmail',
                 'text' => 'Sender Email',
                 'value' => 'info@tanwebsitestudio.com'
@@ -88,39 +58,21 @@ class CreateSettingsTable extends Migration {
             ]
         );
         DB::table('settings')->insert([
-                'param' => 'replyToEmail',
-                'text' => 'Reply to Email',
-                'value' => 'info@tanwebsitestudio.com'
+                'param' => 'receiverEmail',
+                'text' => 'Receiver Email',
+                'value' => 'hello@tanwebsitestudio.com'
             ]
         );
-        DB::table('settings')->insert([
-                'param' => 'replyToName',
-                'text' => 'Reply to Name',
-                'value' => 'Tan Website Studio'
-            ]
-        );
-        DB::table('settings')->insert([
-                'param' => 'mailchimpAPIKey',
-                'text' => 'Mailchimp API Key',
-                'value' => ''
-            ]
-        );;
-        DB::table('settings')->insert([
-                'param' => 'mailchimpListID',
-                'text' => 'Mailchimp List ID',
-                'value' => ''
-            ]
-        );
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('settings');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('settings');
+    }
 
 }

@@ -1,10 +1,12 @@
 // VARIABLE
 $black : #000;
 $white : #fff;
-$mainColor : rgb(184,204,162); //c5e2ca
-$subColor : darkgreen;
+$mainColor : black;
+$subColor : black;
 
 $f1 : helvetica, arial, sans-serif;
+$f2 : helvetica, arial, sans-serif;
+$f3 : helvetica, arial, sans-serif;
 
 
 $f04 : 8px;
@@ -27,24 +29,24 @@ $f35 : 40px;
 
 // MIXIN
 @mixin respondTo($media) {
-	@if $media == largeDesktop {
-		@media screen and (min-width: 1367px) { @content; }
-	} 
-	@else if $media == desktop {
-		@media screen and (max-width: 1366px) { @content; }
-	} 
-	@else if $media == tablet {
-		@media screen and (max-width: 1024px) { @content; }
-	} 
-	@else if $media == smartphone {
-		@media screen and (max-width: 767px) { @content; }
-	} 
-	@else if $media == desktop-only {
-		@media screen and (min-width: 1025px) and (max-width: 1366px) { @content; }
-	} 
-	@else if $media == tablet-only {
-		@media screen and (min-width: 768px) and (max-width: 1024px) { @content; }
-	}
+  @if $media == largeDesktop {
+    @media screen and (min-width: 1367px) { @content; }
+  }
+  @else if $media == desktop {
+    @media screen and (max-width: 1366px) { @content; }
+  }
+  @else if $media == tablet {
+    @media screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == smartphone {
+    @media screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == desktop-only {
+    @media screen and (min-width: 1025px) and (max-width: 1366px) { @content; }
+  }
+  @else if $media == tablet-only {
+    @media screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+  }
 }
 
 @mixin prefixed($property, $value){
@@ -70,26 +72,26 @@ $f35 : 40px;
 }
 
 ::-webkit-input-placeholder {
-	font-style: italic;
+  font-style: italic;
 }
 :-moz-placeholder {
-	font-style: italic;
+  font-style: italic;
 }
 ::-moz-placeholder {
-	font-style: italic;
+  font-style: italic;
 }
 :-ms-input-placeholder {
-	font-style: italic;
+  font-style: italic;
 }
 .wc{color: $white !important;}
 .mc{color: $mainColor !important;}
 .sc{color: $subColor !important;}
 
 .ff2{
-	font-family:$f2;
+  font-family:$f2;
 }
 .ff3{
-	font-family:$f3;
+  font-family:$f3;
 }
 
 
@@ -134,40 +136,6 @@ $f35 : 40px;
 .mt14{margin-top: 70px;}
 .mt15{margin-top: 75px;}
 
-@include respondTo(smartphone){
-	.sm1{margin-bottom: 5px;}
-	.sm2{margin-bottom: 10px;}
-	.sm3{margin-bottom: 15px;}
-	.sm4{margin-bottom: 20px;}
-	.sm5{margin-bottom: 25px;}
-	.sm6{margin-bottom: 30px;}
-	.sm7{margin-bottom: 35px;}
-	.sm8{margin-bottom: 40px;}
-	.sm9{margin-bottom: 45px;}
-	.sm10{margin-bottom: 50px;}
-	.sm11{margin-bottom: 55px;}
-	.sm12{margin-bottom: 60px;}
-	.sm13{margin-bottom: 65px;}
-	.sm14{margin-bottom: 70px;}
-	.sm15{margin-bottom: 75px;}
-
-	.smt1{margin-top: 5px;}
-	.smt2{margin-top: 10px;}
-	.smt3{margin-top: 15px;}
-	.smt4{margin-top: 20px;}
-	.smt5{margin-top: 25px;}
-	.smt6{margin-top: 30px;}
-	.smt7{margin-top: 35px;}
-	.smt8{margin-top: 40px;}
-	.smt9{margin-top: 45px;}
-	.smt10{margin-top: 50px;}
-	.smt11{margin-top: 55px;}
-	.smt12{margin-top: 60px;}
-	.smt13{margin-top: 65px;}
-	.smt14{margin-top: 70px;}
-	.smt15{margin-top: 75px;}
-}
-
 .f05{font-size: $f05;}
 .f12{font-size: $f12;}
 .f13{font-size: $f13;}
@@ -189,48 +157,54 @@ $f35 : 40px;
 .n-p-r{padding-right:0;}
 
 *{
-	outline: none;
-	font-family: $f1;
+  outline: none;
+  font-family: $f1;
 }
 
-.fullWidth {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100% !important;
-}
 .row{
-	max-width:1200px;
+  max-width:1200px;
 }
 
-a,button{
-	&:hover,&:active,&:focus,&:visited{
-		background-color: transparent;
-		color: $black;
-	}
-	background-color: transparent;
-	color: $black;
+hr{
+  margin: 0;
+  border-color: $mainColor;
 }
 
-button{
-	border: 1px $black solid;
+@include respondTo(tablet){
 }
 
 
-.tws{
-	//background-color: black;
-	a{
-		font-size: 14px;
-		letter-spacing: 1px;
-	    color: #f35626;
-	    background-image: -webkit-linear-gradient(180deg, #FF3C00, #04FF00);
-	    @include prefixed(background-clip,text);
-	    @include prefixed(text-fill-color,transparent);
-	    @include prefixed(animation,hue 4s infinite linear);
-	}
-}
 
-p{
-	font-size:inherit;
-	margin: 0;
+@include respondTo(smartphone){
+  .sm1{margin-bottom: 5px;}
+  .sm2{margin-bottom: 10px;}
+  .sm3{margin-bottom: 15px;}
+  .sm4{margin-bottom: 20px;}
+  .sm5{margin-bottom: 25px;}
+  .sm6{margin-bottom: 30px;}
+  .sm7{margin-bottom: 35px;}
+  .sm8{margin-bottom: 40px;}
+  .sm9{margin-bottom: 45px;}
+  .sm10{margin-bottom: 50px;}
+  .sm11{margin-bottom: 55px;}
+  .sm12{margin-bottom: 60px;}
+  .sm13{margin-bottom: 65px;}
+  .sm14{margin-bottom: 70px;}
+  .sm15{margin-bottom: 75px;}
+
+  .smt1{margin-top: 5px;}
+  .smt2{margin-top: 10px;}
+  .smt3{margin-top: 15px;}
+  .smt4{margin-top: 20px;}
+  .smt5{margin-top: 25px;}
+  .smt6{margin-top: 30px;}
+  .smt7{margin-top: 35px;}
+  .smt8{margin-top: 40px;}
+  .smt9{margin-top: 45px;}
+  .smt10{margin-top: 50px;}
+  .smt11{margin-top: 55px;}
+  .smt12{margin-top: 60px;}
+  .smt13{margin-top: 65px;}
+  .smt14{margin-top: 70px;}
+  .smt15{margin-top: 75px;}
 }

@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 //Route::get('admin', [
 //	'uses' => 'AdminController@index',

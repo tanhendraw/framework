@@ -9,25 +9,28 @@
 	<meta name="keywords" content="{!! $setting['mainMetaKeywords'] !!}" />
 
 	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-	<link href="{{ asset('/foundation/stylesheets/app.css') }}" rel="stylesheet">
-	<link href='{{ asset('/default/fonts/roboto.css') }}' rel='stylesheet' type='text/css'>
-	<link href='{{ asset('/default/fonts/lato.css') }}' rel='stylesheet' type='text/css'>
-	<link href='{{ asset('/foundation-icon/foundation-icons.css') }}' rel='stylesheet' type='text/css'>
+	<link href="{{ asset('foundation/css/app.css') }}" rel="stylesheet">
+	<link href='{{ asset('default/fonts/roboto.css') }}' rel='stylesheet' type='text/css'>
+	<link href='{{ asset('default/fonts/lato.css') }}' rel='stylesheet' type='text/css'>
+	<link href='{{ asset('foundation-icon/foundation-icons.css') }}' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
 	@yield('style')
 </head>
 <body>
-	{{-- NAV --}}
+{{-- NAV --}}
 
-	@yield('content')
-	<div class="text-center tws"><a href="http://tanwebsitestudio.com" target="_blank">Tan Website Studio</a></div>
+@yield('content')
+<div class="text-center tws"><a href="http://tanwebsitestudio.com" target="_blank">Tan Website Studio</a></div>
 
-	<script src="{{ asset('/default/js/jquery.min.js') }}"></script>
-	<script src="{{ asset('/default/js/custom.js') }}"></script>
-	<script src="{{ asset('/foundation/js/foundation.min.js') }}"></script>
-	<script src="{{ asset('/foundation/js/app.js') }}"></script>
-	{{--<script src="{{ asset('/slick/slick/slick.min.js') }}"></script>--}}
+{{--<script src="{{ asset('/slick/slick/slick.min.js') }}"></script>--}}
+<script src="{{ asset('foundation/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('foundation/bower_components/foundation-sites/dist/js/foundation.min.js') }}"></script>
+<script src="{{ asset('foundation/js/app.js') }}"></script>
+@yield('script')
+{{-- // <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script> --}}
 
-	@yield('script')
-	{{-- // <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script> --}}
+
 </body>
 </html>
